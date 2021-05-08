@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+    <link href= "{{ url_for('static',filename='stylesheets/style.css') }}" rel= "stylesheet" >
+    <style>
+      html
+      {
+        scroll-behavior: smooth;
+      }
+      
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .boxy{
+        box-shadow: 11px 9px 24px -11px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 11px 9px 24px -11px rgba(0,0,0,0.75);
+        -moz-box-shadow: 11px 9px 24px -11px rgba(0,0,0,0.75);
+      }
+    </style>
+
+    <title>Yummy Yum</title>
+  </head>
+  <body style="background-color: rgb(242 210 158);">
+    <nav class="navbar navbar-expand-lg nav_style p-3 sticky-top">
+        <a class="navbar-brand pl-5" href="#"><h3>🥑 Yummy Yum</h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto pr-5 text-capitalize">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"><h5>Try Out</h5><span class="sr-only">(current)</span></a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container pt-5 pb-5">
+        <div class="section_header mb-5">
+            <h1> Choose 5 recipes you like ❤ </h1>
+            <h3> It will help us find new recipies you'll enjoy. </h3>
+        </div>
+        <form method="POST" action="/">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][0]}}">
+                          <h5 class="card-title">{{most_popular[0][0]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" name="my_checkbox" value="{{most_popular[0][0]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][1]}}">
+                          <h5 class="card-title">{{most_popular[0][1]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" name="my_checkbox" value="{{most_popular[0][1]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][2]}}">
+                          <h5 class="card-title">{{most_popular[0][2]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" name="my_checkbox" value="{{most_popular[0][2]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+              </div>
+              <div class="row mb-5">
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][3]}}">
+                          <h5 class="card-title">{{most_popular[0][3]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][3]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][4]}}">
+                          <h5 class="card-title">{{most_popular[0][4]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][4]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][5]}}">
+                          <h5 class="card-title">{{most_popular[0][5]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][5]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+              </div>
+              <div class="row mb-5">
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][6]}}">
+                          <h5 class="card-title">{{most_popular[0][6]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][6]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][7]}}">
+                          <h5 class="card-title">{{most_popular[0][7]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][7]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][8]}}">
+                          <h5 class="card-title">{{most_popular[0][8]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][8]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+              </div>
+              <div class="row mb-5">
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][9]}}">
+                          <h5 class="card-title">{{most_popular[0][9]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][9]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][10]}}">
+                          <h5 class="card-title">{{most_popular[0][10]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][10]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][11]}}">
+                          <h5 class="card-title">{{most_popular[0][11]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][11]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+              </div>
+              <div class="row mb-5">
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][12]}}">
+                          <h5 class="card-title">{{most_popular[0][12]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][12]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][13]}}">
+                          <h5 class="card-title">{{most_popular[0][13]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][13]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][14]}}">
+                          <h5 class="card-title">{{most_popular[0][14]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][14]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+              </div>
+              <div class="row mb-5">
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][15]}}">
+                          <h5 class="card-title">{{most_popular[0][15]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][15]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][16]}}">
+                          <h5 class="card-title">{{most_popular[0][16]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][16]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][17]}}">
+                          <h5 class="card-title">{{most_popular[0][17]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][17]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+              </div>
+              <div class="row mb-5">
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][18]}}">
+                          <h5 class="card-title">{{most_popular[0][18]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][18]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][19]}}">
+                          <h5 class="card-title">{{most_popular[0][19]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][19]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][20]}}">
+                          <h5 class="card-title">{{most_popular[0][20]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][20]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+              </div>
+              <div class="row mb-5">
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][21]}}">
+                          <h5 class="card-title">{{most_popular[0][21]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][21]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][22]}}">
+                          <h5 class="card-title">{{most_popular[0][22]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][22]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card boxy" style="width: 18rem;">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{most_popular [1][23]}}">
+                          <h5 class="card-title">{{most_popular[0][23]}}</h5>
+                          <label class="switch">
+                            <input type="checkbox" name="my_checkbox" value="{{most_popular[0][23]}}">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section_header mb-5 text-center">
+            <input type="submit" class="btn btn-primary" id="onboarding_submit" value="Show me what to cook!">
+        </div>
+    </div>
+  </form>
+    <div class="mt-5">
+        <div class="footer_style text-white text-center container-fluid">
+            <p>Copyright &copy; 2021, by Sujit Soren and Anshul Singh</p>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
