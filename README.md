@@ -24,4 +24,9 @@
 
 ## Dependencies
 
+* Flask
+* Bootstrap 4
+* Machine Learning Algorithm
+* Recommendation System
+
 ## Reference
