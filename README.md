@@ -1,5 +1,7 @@
 # Yummy-Yum-Frosthack
 
+## How to get started
+
 ### Downloading the Code
 
 * Go to (<https://github.com/Sujit1011/Yummy-Yum-Frosthack>) and click on **Fork**
