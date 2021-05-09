@@ -22,11 +22,53 @@
 
 * Run the server `python app.py`
 
-## Dependencies
+## Dependencies and Algorithms Preferred
 
 * Flask
 * Bootstrap 4
 * Machine Learning Algorithm
 * Recommendation System
+  * Collaborative Filtering - Suggest recipes that other users similar to you also liked (Cosine Similarity)
+  * Content Based Filtering - Suggest recipes that are similar to recipes that you like (Cosine Similiarity)
+  * Matrix Factorization - Suggest recipes that you like, uncover latent factors, in a lower dimensional space (Singular Value Decomposition)
 
-## Reference
+### OUR WEB PAGE SCREENSHOTS
+
+* OUR FRONT-PAGE
+  * We select any 5 Tasty Dishes, from the options below, which gets updated, each and every time we refresh the Site.
+  </br>
+  <p align="center">
+    <img src="https://github.com/anshulsingh8101/fdsfsfdsf/blob/main/Screenshots/2.jpg" width="900" title="hover text">
+  </p>
+  </br>
+  * After Selecting, we press 'Show me what to cook' button, to get the responses.
+  </br>
+  <p align="center">
+    <img src="https://github.com/anshulsingh8101/fdsfsfdsf/blob/main/Screenshots/3.jpg" width="900" title="hover text">
+  </p>
+  </br>
+
+* OUR RESULTS-PAGE
+   * We Get several Recommendations, for Interesting similar types of dishes, that any user can make in the future.
+   </br>
+   <p align="center">
+     <img src="https://github.com/anshulsingh8101/fdsfsfdsf/blob/main/Screenshots/5.jpg" width="900" title="hover text">
+   </p>
+   </br>
+  
+   * We Get several categories, like the one down below, to recommend to our users.
+   </br>
+   <p align="center">
+     <img src="https://github.com/anshulsingh8101/fdsfsfdsf/blob/main/Screenshots/4.jpg" width="900" title="hover text">
+   </p>
+   </br>
+
+### Video Presentation
+For better Understanding, of our project, go to - URL
+
+
+### Our References
+
+* https://github.com/maciejkula/spotlight
+* https://github.com/garrrychan/recipe_recommender_system
+* https://www.manning.com/books/practical-recommender-systems
